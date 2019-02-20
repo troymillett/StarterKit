@@ -40,7 +40,7 @@ Check that the server is running by going to [localhost:8080](http://localhost:8
 
 ### Edit index.html
 - Open `index.html` in the `StarterKit` folder in your prefered IDE or text editor.
-- Change the HTML in the `body` to "Hello Word".
+- Change the HTML in the `body` to "Hello World".
 - Go to back to [localhost:8080](http://localhost:8080) to see that the App changed (`npm start` should still be running).
 
 
@@ -55,10 +55,11 @@ https://mycompany.domo.com/datasources/f3312abc-469b-476e-8283-ef77367c9fec/deta
 ```
 - The dataset id is the 36 character hash between the `datasources/` and before `/details`. In the URL above my dataset id is `f3312abc-469b-476e-8283-ef77367c9fec`.
 - Copy the dataset id portion in your browser's URL. You will need to paste this in your terminal in the next section.
-
+- Go back to your terminal window and quit the `npm start` command (if it is still running, press `Ctrl + C` on Windows or `Cmd + C` on Mac).
 
 ### Make sure you are up-to-date
-Before you can publish your App you will want to make sure that your `domo` client is up to date and linked to the correct account. To do this run:
+Before you can publish your App you will want to make sure that your `domo` client is up to date and linked to the correct account. 
+To do this run:
 ```bash
 domo login
 ```
@@ -70,7 +71,6 @@ domo login
 
 
 ### Create your App's manifest
-- Go back to your terminal window and quit the `npm start` command (if it is still running, press `Ctrl + C` on Windows or `Cmd + C` on Mac).
 - Run the command `domo init` to start the process of initializing your Domo Custom App:
 ```bash
 domo init
@@ -96,7 +96,7 @@ Return to your terminal window and type:
 npm run build
 npm run deploy
 ```
-You can now add your Custom App as Card to any page in Domo!
+You can now add your Custom App as Card to any page in Domo! (We'll do that shortly)
 
 
 
@@ -131,7 +131,7 @@ domo.get('/data/v1/DATASET_ALIAS?limit=100').then(function(data){
 ```
 
 # Publish and test your App
-Now that domo.js is added, you can test that it is querying your dataset corectly. Before you can test it you will need to build and publish your App again. If you don't remember how to do this, it is as simple as runing `npm run build` to build and then `npm run deploy`. If you want to get really fancy you can run both commands on one line like this:
+Now that domo.js is added, you can test that it is querying your dataset correctly. Before you can test it you will need to build and publish your App again. If you don't remember how to do this, it is as simple as runing `npm run build` to build and then `npm run deploy`. If you want to get really fancy you can run both commands on one line like this:
 ```bash
 npm run build && npm run deploy
 ```
